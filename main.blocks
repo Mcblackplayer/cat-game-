@@ -1,0 +1,52 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id=")4P!OSFDU!JF6JC=eJ;#">Player</variable><variable type="KIND_SpriteKind" id="ekNS6@yJpoOL;~T[OAky">Projectile</variable><variable type="KIND_SpriteKind" id="W+j$:gNR?fN$;1qj%=u$">Food</variable><variable type="KIND_SpriteKind" id="og#q(U90dOkp%zz{=as;">Enemy</variable><variable id="~um-`X1rXQ.m(@Sh=Lxo">mySprite</variable><variable id="Bx0I;L@l5[gRq2H66#!t">anim</variable><variable type="ActionKind" id="sx~s3TvX?df7c*I6*,x`">0Walking</variable><variable type="ActionKind" id="EQUTIS15Eo2V1?]E(cH_">1Idle</variable><variable type="ActionKind" id="DtA]/Kw50qy@EIxgLb,q">2Jumping</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="~um-`X1rXQ.m(@Sh=Lxo">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . . . . 4 f f 4 . . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="~um-`X1rXQ.m(@Sh=Lxo">mySprite</field></block></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">0</field></shadow></value><next><block type="variables_set"><field name="VAR" id="Bx0I;L@l5[gRq2H66#!t">anim</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="createAnimation"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">2Jumping</field></shadow></value><value name="interval"><shadow type="math_number"><field name="NUM">1000</field></shadow></value></block></value><next><block type="addAnimationFrame"><value name="frame"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow><block type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . . . . 4 f f 4 . . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . . . . 4 4 4 4 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value><value name="this"><block type="variables_get"><field name="VAR" id="Bx0I;L@l5[gRq2H66#!t">anim</field></block></value></block></next></block></next></block></next></block></statement></block><block type="keyonevent" x="30" y="370"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="Sprite_blockCombine_set"><field name="property">Sprite.ay@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="~um-`X1rXQ.m(@Sh=Lxo">mySprite</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">-50</field></shadow></value></block></statement></block></xml>
